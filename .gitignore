@@ -1,0 +1,6 @@
+# Dataset
+*.csv
+data/
+
+# virtual environments
+.venv/

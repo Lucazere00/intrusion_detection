@@ -1,0 +1,30 @@
+paths:
+  raw_csv_dir: data/raw_csv
+  parquet_dir: data/parquet
+
+# versione del dataset
+versions:
+  v3:
+    sources:
+      - dataset: NF-BoT-IoT
+        file: NF-BoT-IoT-v3.csv
+      - dataset: NF-CSE-CIC-IDS2018
+        file: NF-CSE-CIC-IDS2018-v3.csv
+      - dataset: NF-ToN-IoT
+        file: NF-ToN-IoT-v3.csv
+      - dataset: NF-UNSW-NB15
+        file: NF-UNSW-NB15-v3.csv
+  v2:
+    sources:
+      - dataset: NF-BoT-IoT
+        file: NF-BoT-IoT-v2.csv
+      - dataset: NF-CSE-CIC-IDS2018
+        file: NF-CSE-CIC-IDS2018-v2.csv
+      - dataset: NF-ToN-IoT
+        file: NF-ToN-IoT-v2.csv
+      - dataset: NF-UNSW-NB15
+        file: NF-UNSW-NB15-v2.csv
+
+duckdb:
+  memory_limit: 20GB
+  temp_directory: .duckdb_tmp
