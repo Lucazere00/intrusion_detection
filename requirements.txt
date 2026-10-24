@@ -1,2 +1,6 @@
 duckdb
 pyyaml
+matplotlib
+pandas
+scipy
+scikit-learn
