@@ -1,6 +1,7 @@
 paths:
   raw_csv_dir: data/raw_csv
   parquet_dir: data/parquet
+  clean_parquet_dir: data/clean_parquet
 
 # versione del dataset
 versions:
@@ -24,6 +25,30 @@ versions:
         file: NF-ToN-IoT-v2.csv
       - dataset: NF-UNSW-NB15
         file: NF-UNSW-NB15-v2.csv
+
+
+cleaning:
+  v2:
+    drop_columns:
+      - MAX_IP_PKT_LEN
+    attack_name_map:        
+      ddos: DDoS
+      dos: DoS
+      backdoor: Backdoor
+      Infilteration: Infiltration
+      xss: XSS
+      scanning: Scanning
+      password: Password
+      injection: Injection
+      mitm: MitM
+      ransomware: Ransomware
+    web_attack:
+      family_name: web attack
+      classes:
+        - DDOS attack-HOIC
+        - Brute Force -Web
+        - Brute Force -XSS
+        - SQL Injection
 
 duckdb:
   memory_limit: 20GB
